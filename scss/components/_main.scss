@@ -27,12 +27,13 @@
         @include grid-area(right);
         @include desktops() {
             text-align: left;
+            @include position(relative);
         }
 
         .title{
             font-size: 2.5rem;
             @include desktops() {
-                font-size: 3.5rem;
+                font-size: 5rem;
             }
         }
 
@@ -41,12 +42,13 @@
             margin: 1rem 0 2rem;
             @include desktops() {
                 margin: 1.8rem 0 1.5rem;
+                font-size: 1.8rem;
             }
         }
 
         .btn{
             width: 60%;
-            background: $white;
+            background: $white; 
             font-size: 1.2rem;
             border-radius: 2rem;
             padding: .8rem 0;
@@ -56,14 +58,18 @@
             @include display(inline-block);
             @include desktops() {
                 text-align: center;
-                width: 35%;
-                padding: 1.2rem 0;
+                width: 30%;
+                padding: 1.5rem 0;
             }
         }
 
         .images{
             @include desktops() {
                 text-align: right;
+                @include position(absolute){
+                    bottom: 0;
+                    right: 0;
+                };
             }
             .image{
                 margin: 0 .2rem;
