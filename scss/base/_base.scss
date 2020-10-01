@@ -1,0 +1,27 @@
+*, *::after, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html{
+    font-size: 10px;
+
+    body{
+        color: $white;
+        background: $violet center / cover no-repeat url('../images/bg-mobile.svg');
+        @include size();
+        @include desktops() {
+            background: $violet center / cover no-repeat url('../images/bg-desktop.svg');
+        }
+    
+        h2{
+            font-family: $font-one;
+        }
+        
+        p, a{
+            font-family: $font-two;
+        }
+    }
+}
